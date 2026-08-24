@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-on-background;
+}
+
+.input-glow:focus {
+  box-shadow: 0 0 0 2px rgba(5, 5, 25, 0.1);
+}

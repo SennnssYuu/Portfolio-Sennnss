@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jason Rae - Digital Product Designer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#f3e1b6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#c7e7ff",
+                        "inverse-on-surface": "#f4f0ef",
+                        "pastel-blue": "#EAF9FF",
+                        "surface": "#fcf8f7",
+                        "primary-fixed-dim": "#c6c4e1",
+                        "primary-container": "#1d1d33",
+                        "background": "#fcf8f7",
+                        "on-primary-container": "#85849f",
+                        "on-background": "#1c1b1b",
+                        "tertiary": "#6a5d3b",
+                        "primary-fixed": "#e2dffe",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#ddd9d8",
+                        "on-primary-fixed-variant": "#45445d",
+                        "on-primary-fixed": "#19192f",
+                        "tertiary-container": "#baaa82",
+                        "inverse-surface": "#313030",
+                        "tertiary-fixed-dim": "#d6c59b",
+                        "surface-tint": "#5d5c75",
+                        "accent-magenta": "#E94E77",
+                        "error-container": "#ffdad6",
+                        "surface-subtle": "#F4F4F4",
+                        "outline": "#78767d",
+                        "on-secondary-fixed-variant": "#004c6c",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf8f7",
+                        "surface-container": "#f1edec",
+                        "on-surface-variant": "#47464d",
+                        "primary": "#050519",
+                        "on-secondary-container": "#00587d",
+                        "outline-variant": "#c8c5cd",
+                        "on-tertiary-fixed": "#231b02",
+                        "pastel-pink": "#FAF0F4",
+                        "pastel-yellow": "#FFF9E6",
+                        "inverse-primary": "#c6c4e1",
+                        "surface-container-low": "#f7f3f2",
+                        "on-secondary-fixed": "#001e2e",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#ebe7e6",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#85cfff",
+                        "secondary-fixed-dim": "#85cfff",
+                        "on-tertiary-container": "#4a3e1f",
+                        "secondary": "#00658e",
+                        "on-tertiary-fixed-variant": "#514626",
+                        "surface-variant": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "12px",
+                        "container-max": "1200px",
+                        "gutter": "32px",
+                        "section-v-mobile": "80px",
+                        "stack-md": "24px",
+                        "section-v": "140px"
+                    },
+                    "fontFamily": {
+                        "meta": ["Karla"],
+                        "body-md": ["Karla"],
+                        "label-caps": ["Karla"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Karla"],
+                        "display-lg": ["Space Grotesk"],
+                        "display-lg-mobile": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "meta": ["14px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .input-glow:focus {
+            box-shadow: 0 0 0 2px rgba(5, 5, 25, 0.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter py-stack-md max-w-container-max mx-auto bg-surface/80 backdrop-blur-md">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#home">DESIGNER.STUDIO</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#expertise">Expertise</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#works">Works</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:scale-105 transition-transform duration-200" href="#contact">Contact</a>
+</div>
+<a class="hidden md:inline-flex bg-primary-container text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200" href="#contact">Let's Talk</a>
+<!-- Mobile Menu Button (Icon) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main class="flex-grow pt-32">
+<!-- Home Section -->
+<section class="w-full px-gutter py-section-v-mobile md:py-section-v max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16 relative" id="home">
+<div class="flex-1 space-y-stack-md z-10">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">Hey, I'm a digital product designer.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Hi, I'm Jason a freelance web designer from San-Francisco. I help brands turn their ideas into high quality products.
+                </p>
+<div class="pt-8">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase">Join my newsletter and get free strategy!</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-md">
+<input class="flex-1 bg-surface-subtle border-none rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-fixed outline-none text-on-surface" placeholder="Your email address" type="email"/>
+<button class="bg-primary-container text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200 whitespace-nowrap" type="submit">Explore</button>
+</form>
+</div>
+</div>
+<div class="flex-1 relative w-full flex justify-center md:justify-end">
+<div class="relative w-full max-w-md aspect-[3/4] md:aspect-square bg-pastel-yellow rounded-[2rem] overflow-hidden shadow-[0_20px_40px_rgba(29,29,51,0.05)]">
+<img class="w-full h-full object-cover object-center absolute inset-0" data-alt="A professional studio portrait of a confident male digital product designer, smiling, wearing glasses and a casual burgundy shirt, set against a pristine white background with soft, high-key lighting emphasizing a modern, approachable aesthetic." src="https://lh3.googleusercontent.com/aida/AEtjO1XS1NB35SqzOe6N1-qy_ODa_YzoUyzOVmXDF1fTSvqBBypVRyhK2nUM-TA3jZqqXH3C7oq6d6d5qE395ZTvY1ninNAxkQQaTKRcLV3xYfn-IsucEv4KSqMOTbOrALLgcSvtk1kG6MqCNLdddE9YoHXvk0NiOuSRa3rRBcMaG-xpfmL0_vMaTIlMsAlF6CZfUtUVnzWVQ5SiqybtM5SekDJd9JU1Pt9IpDCNQf8kV9i2yIik1eaFeSZocig"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-8 -left-8 w-32 h-32 bg-pastel-blue rounded-full blur-2xl opacity-60 -z-10"></div>
+<div class="absolute -top-8 -right-8 w-40 h-40 bg-pastel-pink rounded-full blur-2xl opacity-60 -z-10"></div>
+</div>
+</section>
+<!-- Expertise Section -->
+<div id="expertise">
+<!-- Hero Section for Expertise -->
+<section class="px-gutter py-section-v-mobile md:py-section-v max-w-container-max mx-auto text-center flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-high px-4 py-2 rounded-full mb-stack-md inline-block">MY SKILLS</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-stack-md">My Expertise</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Helping brands turn their ideas into high quality products through a comprehensive and strategic approach to digital design.
+            </p>
+</section>
+<!-- Expertise Bento Grid -->
+<section class="px-gutter pb-section-v max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Strategy & Direction -->
+<div class="col-span-1 md:col-span-7 bg-pastel-blue rounded-xl p-8 md:p-12 relative overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-colors duration-500"></div>
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-stack-md shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Strategy &amp; Direction</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-primary font-semibold">Understand First.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. We dive deep into user needs and business goals before sketching a single screen.
+                    </p>
+</div>
+<!-- Branding & Logo -->
+<div class="col-span-1 md:col-span-5 bg-pastel-pink rounded-xl p-8 md:p-12 relative overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="absolute -left-10 -bottom-10 w-40 h-40 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-colors duration-500"></div>
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-stack-md shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-accent-magenta" style="font-size: 32px;">diamond</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Branding &amp; Logo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-primary font-semibold">Position the Brand.</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse dicta sunt explicabo. Crafting visual identities that resonate and endure.
+                    </p>
+</div>
+<!-- Motion & Animation -->
+<div class="col-span-1 md:col-span-6 bg-pastel-yellow rounded-xl p-8 md:p-12 relative overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-stack-md shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-tertiary" style="font-size: 32px;">animation</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Motion &amp; Animation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-primary font-semibold">Communicate to all.</strong> Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Bringing interfaces to life with purposeful, delightful motion.
+                    </p>
+</div>
+<!-- Development -->
+<div class="col-span-1 md:col-span-6 bg-surface-container rounded-xl p-8 md:p-12 relative overflow-hidden group hover:scale-[1.01] transition-transform duration-300">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-stack-md shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<span class="material-symbols-outlined text-primary" style="font-size: 32px;">code</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<strong class="text-primary font-semibold">Bringing work to life.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Clean, scalable front-end execution.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Customers & Clients Logos -->
+<section class="py-section-v bg-surface-container-low">
+<div class="px-gutter max-w-container-max mx-auto text-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-stack-md block">COMPANIES</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-16">Customers &amp; Clients</h2>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Fake Logo placeholders -->
+<div class="font-headline-md text-headline-md font-bold tracking-tighter">Slack</div>
+<div class="font-headline-md text-headline-md font-bold italic">Dribbble</div>
+<div class="font-headline-md text-headline-md font-medium tracking-widest uppercase">Webflow</div>
+<div class="font-headline-md text-headline-md font-bold text-red-500">Youtube</div>
+<div class="font-headline-md text-headline-md font-light">Figma</div>
+</div>
+</div>
+</section>
+<!-- Customer Testimonials -->
+<section class="px-gutter py-section-v max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-pastel-yellow px-4 py-2 rounded-full mb-stack-md inline-block text-tertiary">CRAFT AMAZING</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Customer Testimonials</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface rounded-xl p-8 shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-surface-container hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-4 block">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 italic">
+                        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical."
+                    </p>
+<div class="flex items-center gap-4">
+<img alt="Headshot of John Doe" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VZvKGlhnmu1sBn2dLDPkyb0KqvYNpKvnQAB03REhKkvdAMwxh8WAbd68tsOvx9YX8CR36cSGYpBjkMB0nf8J7TQxwF9rhEoYWt_Ju_-T5UC2Gx3Lombp23X4dhSxAWlWlpGIOHLlFRtPcpjoYdlQ_h0gnar5VPTsOsuud_GeMTo1OFsyEH2CFu7Gp4QIpBd-9FeDTPW1oYfLtOlmR069Wy6pJrEheLs8NU1ACcSMWsW1fichoeTKSqJjk"/>
+<div>
+<div class="font-bold text-primary">John Doe</div>
+<div class="font-meta text-meta text-on-surface-variant">Marketing Manager</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface rounded-xl p-8 shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-surface-container hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-4 block">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 italic">
+                        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical."
+                    </p>
+<div class="flex items-center gap-4">
+<img alt="Headshot of Steve Mark" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XHeUfFl3ki-EFW19h6DY9vqESHVyW8dYUU11TeyDGo4GcJuHlT1ASTLHHBPCSDISd5swxNRVgKp06Lr6lgMDaQl5wL50YliBrEuRXOSUQu-GtSn_ShYlUnypkKkj_c0dnI9WqOAt6YccGxN5OhOo4WQgCianfHZuCHt1b3QQjEzunE84z5kWqXUd1qV1cPJEO5gZqkF2L3RrsFeuzIY2POgSoW0sfq12_LdC91cmaTQX0Vo1zvx1RuodA"/>
+<div>
+<div class="font-bold text-primary">Steve Mark</div>
+<div class="font-meta text-meta text-on-surface-variant">Founder &amp; Leader</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface rounded-xl p-8 shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-surface-container hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-4 block">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 italic">
+                        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical."
+                    </p>
+<div class="flex items-center gap-4">
+<img alt="Headshot of Sarah Smith" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XJkabWB7jX4AygwWAflcpI2Tezcdnawx6p8i6TDCgONTwbeOPAva6PNbr_JIZQZEycUQfYjK8h26ELNKi7IP6Lbl4DO7wJs_IHrmd-S6TjwuiQ5DweA3H7gEr1p0SEfVCCJAoSYPwFXOxAjL5Vau2b5QiSp_lyGTS7oDM5fhRsXQUFMrOsxa4LFaRLLvyC8QlD1e7KHKwQ8JPKhbL9Qd8K4u-hqrdpqfIINtjsDtgGQM38RMa9JQrqqno"/>
+<div>
+<div class="font-bold text-primary">Sarah Smith</div>
+<div class="font-meta text-meta text-on-surface-variant">Operations Team</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Works Section -->
+<div class="flex-grow pt-section-v-mobile md:pt-section-v pb-section-v-mobile md:pb-section-v px-gutter max-w-container-max mx-auto w-full" id="works">
+<!-- Page Header -->
+<section class="mb-section-v-mobile md:mb-section-v text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-stack-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest block mb-stack-sm">PORTFOLIO</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">All Creative Works</h1>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-pastel-pink text-accent-magenta hover:scale-[1.02] transition-transform duration-200 font-label-caps uppercase tracking-widest text-label-caps" href="https://dribbble.com">
+<span class="bg-accent-magenta text-white px-2 py-0.5 rounded-full text-[10px] mr-2">NEW</span>
+                Discover all projects on Dribbble
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</section>
+<!-- Works Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+<!-- Project 1 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-6 bg-surface-subtle">
+<img alt="Mobile App Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, modern mobile app design mockup displayed on multiple screens, set against a soft pastel background with diffused lighting." src="https://lh3.googleusercontent.com/aida/AEtjO1Uexdd9Q5PtrAMa6mo_8JvpHP_7dt_gTboxGeEHYWHrG1G5QajppcabW49SPk0-ry5cde8BUA005-8LcCHtmmmGAsh0mu95T21jZVHPPPv6RLh169WBJmxFa0OSUSROCK6sulnuxAch9jYxiEAsUTnhXybgV3vwPN26eS5TsznEOOzdM5xVmH-NLkAEEXZgz1HHeFEbKDJi8wiBVdzBiISX6MfqFjD1p_n1NYTMhyHy7cytfdvE_XRDlgk"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant bg-surface-container px-3 py-1 rounded-full w-fit">UI/UX</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-accent-magenta transition-colors">Mobile App Design</h3>
+<a class="font-meta text-meta text-outline group-hover:text-primary transition-colors flex items-center gap-1 mt-2" href="/projects/mobile">
+                        See on Dribbble <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="group cursor-pointer mt-0 md:mt-12">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-6 bg-surface-subtle">
+<img alt="Food Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-fidelity mockup of a food delivery application, showcasing vibrant food imagery and clean typography on a bright, minimalist interface." src="https://lh3.googleusercontent.com/aida/AEtjO1XZktQ19IWo_QskIXyOLayRReWuG1yNPv4QzMjSOtSRrOrKyuPZCmxd5FePGufZo5hyCfPMtpq_-u0UiK_FPW-oqfWNyy3-IOFXh7RT-OnvX62nIIkrKKFFnMCryMD2km1QBmsEQ1D50hdIa-y7MIf9nJOJqTG_y3mAgOy9-orqFdcvFqWgUvVXMstbH5iWV5a4GEM52o0tirwP6Ad57kEYJ6zkHb-fZuQGkBCNE_CjQcA1Dj2h_E08k_Q"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant bg-pastel-yellow px-3 py-1 rounded-full w-fit">Product Design</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-accent-magenta transition-colors">Food Application</h3>
+<a class="font-meta text-meta text-outline group-hover:text-primary transition-colors flex items-center gap-1 mt-2" href="/projects/food">
+                        See on Dribbble <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-6 bg-surface-subtle">
+<img alt="Music UI Challenge" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An experimental music player UI concept featuring bold gradients, large typography, and abstract shapes, presented in a sleek dark mode setting." src="https://lh3.googleusercontent.com/aida/AEtjO1WC4bXs0kqsJkZ1HisDVHszjNBtS7nYwrs25x1KSyTeA8KLGN6CC0kdLVMUEXbr0W2Iv_b7qtSKpjhdmeTDvtuqbM_mqvmvIryMZxTLF0_6ACHNCLFS2uZhbuukD2hJCnN7SUahMLafkM-5c26oqL7KAqsLUtyXwpVZURvf4k2fIZ9zZglqrY_4UiAPbZn2BanqMO6FBaXZmrFmAhKTS23Y5vMW0wfnZWMJMr0DMg7m1DqBwNi6Y7C9GZk"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant bg-pastel-blue px-3 py-1 rounded-full w-fit">Concept</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-accent-magenta transition-colors">Music UI Challenge</h3>
+<a class="font-meta text-meta text-outline group-hover:text-primary transition-colors flex items-center gap-1 mt-2" href="/projects/music">
+                        See on Dribbble <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</article>
+<!-- Project 4 -->
+<article class="group cursor-pointer mt-0 md:mt-12">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-6 bg-surface-subtle">
+<img alt="Dashboard UX" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A complex data dashboard interface demonstrating clear information architecture, subtle charts, and a clean light mode color palette." src="https://lh3.googleusercontent.com/aida/AEtjO1XDgYKcnGwQDheRiPzz8loH2yNw2hByoGlq2hMuIKDzoBo78T49TaqbVrblsubBcWRLiR5npWP1H4agOg5C5Lfy9ZERKac-O9Kwu6bEKVOUbwjdGgy7aTCZFAn5SQ1TcvuTtEOznnd9n2SR1Ad4uG9Jn_0_L7Mxl9oD8QU6FNYhsAYBTTLWUTcSuDYZEn4SHolKuT6BMz3YySUN-esquQImiILbLqrggVj5bRQGsAOkcZJ7QL7LdsI7zNg"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant bg-surface-container px-3 py-1 rounded-full w-fit">Web App</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-accent-magenta transition-colors">Dashboard UX</h3>
+<a class="font-meta text-meta text-outline group-hover:text-primary transition-colors flex items-center gap-1 mt-2" href="/projects/dashboard-ux">
+                        See on Dribbble <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</article>
+<!-- Project 5 -->
+<article class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-6 bg-surface-subtle">
+<img alt="Platform Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sophisticated platform landing page design emphasizing typography and whitespace, featuring abstract 3D elements to illustrate technical concepts." src="https://lh3.googleusercontent.com/aida/AEtjO1WEMzy54XXaczR67rZ9K0CqsrMr9mrDuu0Fnv76K2C8LgNN3TICRwx_7lEvqxg1tYF73WkEupn2kW0TdBGdmZzoZvl1IXjTaK0hYuhEdFaCSZ08-a_wv_BaODgTaGC2Ryuis6c6GqMGUSdOTHRhGRzrW20cmISqxybfFbSMtTibuPfR7ijkJTzn3OqJHmBwx4YVThMzW8rhhLGy8Br1I1uhe_yOl09SMp4ikl_Ju2cTsjB8lfgXfqBx4wU"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant bg-pastel-pink px-3 py-1 rounded-full w-fit">Development</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-accent-magenta transition-colors">Platform Development</h3>
+<a class="font-meta text-meta text-outline group-hover:text-primary transition-colors flex items-center gap-1 mt-2" href="/projects/platform">
+                        See on Dribbble <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</article>
+<!-- Project 6 -->
+<article class="group cursor-pointer mt-0 md:mt-12">
+<div class="relative overflow-hidden rounded-lg aspect-[4/3] mb-6 bg-surface-subtle">
+<img alt="Financial Manager App" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean financial management app interface showing elegant graphs and transaction lists, prioritizing clarity and trust through a subdued color scheme." src="https://lh3.googleusercontent.com/aida/AEtjO1U4WoCM0TGe5l8HzgR4gN-NBuiVFZVk9e0wvlPZYZZiNcZrsGhAfvzQyqybEcm6_OAizIvTEq3wuRpuTXrqWOupynpCzfczojwwb9YbYHXJHZDoB4RSaNYBnQwxOn3EUjvXXuTiBy6d3NZB5xOl0Ef7hXitioNpFAq66EZGDQiS-Dhtggb2gMEdalGy-th3LivH5FXu7-aiOa96YSC9DCLhPhUolGOhj-ufL_L3u3tBuM_kpiOamnD-Pw"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant bg-tertiary-fixed px-3 py-1 rounded-full w-fit">Fintech</span>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-accent-magenta transition-colors">Financial Manager App</h3>
+<a class="font-meta text-meta text-outline group-hover:text-primary transition-colors flex items-center gap-1 mt-2" href="/projects/financial-manager-app">
+                        See on Dribbble <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</article>
+</section>
+</div>
+<!-- Contact Section -->
+<div class="flex-grow w-full max-w-container-max mx-auto px-gutter py-section-v-mobile md:py-section-v" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md md:gap-gutter items-start">
+<!-- Left Side: Contact Info -->
+<div class="flex flex-col gap-stack-md md:pr-12">
+<div>
+<span class="inline-block px-4 py-2 bg-pastel-blue text-on-secondary-container rounded-full font-label-caps text-label-caps mb-stack-sm uppercase tracking-widest">Contact Me</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-stack-sm">Got a Project? Lets Talk!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">I'm currently available for freelance work and new opportunities. Reach out and let's create something serene and impactful.</p>
+</div>
+<div class="mt-8 space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-subtle flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-meta text-meta text-outline">Email</p>
+<a class="font-headline-md text-[24px] font-semibold text-primary hover:text-accent-magenta transition-colors" href="mailto:hello@nero.com">hello@nero.com</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Contact Form -->
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_20px_60px_rgba(5,5,25,0.03)] border border-surface-variant relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-pastel-pink rounded-full blur-[80px] opacity-50 pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-pastel-blue rounded-full blur-[80px] opacity-50 pointer-events-none"></div>
+<form class="relative z-10 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="name">Name</label>
+<input class="w-full bg-surface-subtle border-none rounded-lg px-4 py-4 font-body-md text-on-surface focus:ring-0 input-glow transition-shadow outline-none" id="name" placeholder="Jason Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="email">Email</label>
+<input class="w-full bg-surface-subtle border-none rounded-lg px-4 py-4 font-body-md text-on-surface focus:ring-0 input-glow transition-shadow outline-none" id="email" placeholder="hello@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="message">Message</label>
+<textarea class="w-full bg-surface-subtle border-none rounded-lg px-4 py-4 font-body-md text-on-surface focus:ring-0 input-glow transition-shadow outline-none resize-none" id="message" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="mt-4 w-full md:w-auto self-start px-8 py-4 bg-primary-container text-on-error rounded-full font-label-caps text-label-caps hover:scale-[1.02] transition-transform duration-200 shadow-[0_10px_40px_rgba(29,29,51,0.1)] flex items-center justify-center gap-2" type="submit">
+                        Send Message
+                        <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-gutter py-section-v flex flex-col md:flex-row justify-between items-center gap-stack-md max-w-container-max mx-auto bg-surface-container-low">
+<a class="font-headline-md text-headline-md text-primary" href="#home">DESIGNER.STUDIO</a>
+<p class="font-meta text-meta text-on-surface text-center md:text-left">
+            © 2024 Designer Studio. All rights reserved. Crafted with serenity.
+        </p>
+<div class="flex items-center gap-6">
+<a class="font-meta text-meta text-on-surface-variant hover:text-accent-magenta transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-meta text-meta text-on-surface-variant hover:text-accent-magenta transition-colors duration-300" href="#">Dribbble</a>
+<a class="font-meta text-meta text-on-surface-variant hover:text-accent-magenta transition-colors duration-300" href="#">Read.cv</a>
+<a class="font-meta text-meta text-on-surface-variant hover:text-accent-magenta transition-colors duration-300" href="#">Instagram</a>
+</div>
+</footer>
+</body></html>
